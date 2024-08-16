@@ -1,0 +1,87 @@
+.gradient-background {
+    background: linear-gradient(300deg, #2980B9, #6DD5FA, #FFFFFF);
+    background-size: 180% 180%;
+    animation: gradient-animation 18s ease infinite;
+  }
+  
+  @keyframes gradient-animation {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+  .font-hero-h1 {
+    font-family: "Rampart One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  .font-hero-h2{
+    font-family: "Tourney", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:
+      "wdth" 100;
+  }
+ .pro{
+    text-decoration:underline;
+    text-decoration-style: dashed;
+    text-decoration-color: black;
+  }
+  .profile-img{
+    height: 200px;
+    border-radius: 50%;
+  }
+  .font-info-h2{
+    color: #5AB2FF;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 900;
+    font-style: normal;
+   
+  }
+  .font-info-p{
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+
+  }
+  .font-container-h2{
+    color: #00070c;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 900;
+    font-style: normal;
+  }
+  hr{
+    border: 1px solid #5AB2FF;
+    width: 20%;
+    margin: 50px auto;
+  }
+  .carousel-container {
+    display: flex;
+  }
+  .carousel-caption{
+    color:black;
+  }
+  .btn{
+    background-color: #5AB2FF;
+  }
+  .carousel-control-prev-icon, .carousel-control-next-icon {
+    height: 100px;
+    width: 100px;
+    outline: black;
+   
+    background-size: 100%, 100%;
+   
+   
+}
+ 
+ 

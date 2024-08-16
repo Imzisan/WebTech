@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mondrian Project</title>
+  <style>
+    /* 
+    Write your CSS here 
+    Gap Colour: #000
+    White: #F0F1EC
+    Red: #E72F24
+    Black: #232629
+    Blue: #004592
+    Yellow: #F9D01E
+
+    For dimensions, see dimensions.png image.
+    HINT: Remember you can't change the properties of grid lines.
+    But grid lines are transparent!
+    */
+    .root{
+      display: flex;
+      justify-content: center ;
+      align-items: center;
+      height: 100vh;
+    }
+    .container {
+      display: grid;
+      gap: 9px;
+      height: 748px;
+      width: 748px;
+      background-color:black;
+      grid-template-columns: 320px 360px 50px;
+      grid-template-rows: 414px 296px 20px;
+    }
+    .white{
+      background-color: #F0F1EC;
+    }
+    .red {
+      background-color: #E72F24;
+
+    }
+    .red_right {    
+      grid-area: 1 / 2 / 2 / 4;
+    }
+    .bottom_right{
+    
+     display: grid;
+     grid-template-rows: 140px 185px;
+     
+   }
+    .bottom_right_up{
+     
+      border-bottom: 10px solid black;
+      background-color: #004592 ;
+    } 
+   .last-row{
+    display: grid;
+    grid-template-columns: 198px 153px;
+    gap:9px;
+   
+   }
+   .last-row-left{
+    background-color: #F9D01E;
+   }
+   .last-row-right{
+    background-color: #232629;
+   }
+ 
+
+  </style>
+</head>
+
+<body class="root">
+  <!-- Write your HTML here -->
+  <div class="container">
+    <div class="item red"></div>
+    <div class="item white red_right"></div>
+    <div class="item white under_red"></div>
+    <div class="item  white fourth_box"></div>
+    <div class="item bottom_right">
+      <div class="item bottom_right_up"></div>
+      <div class="item white bottom_right_down"></div>
+    </div>
+
+    <div class="item white bottom_left"></div>
+    <div class="item last-row">
+      <div class="last-row-left"></div>
+      <div class="last-row-right"></div>
+    </div>
+
+  </div>
+</body>
+
+</html>
