@@ -17,9 +17,9 @@ app.get("/random" ,  (req,res) =>{
 
 )
 
-//2. GET a specific joke
-app.get("/jokes/:id",(req,res)=>{   //params end point path parameter :id and query ?id.
-  const id = parseInt(req.params.id);
+//2. GET a specific joke // to get something specific path parameters are used which are variables embedded directly into the url 
+app.get("/jokes/:id",(req,res)=>{   //on the other side query parameters are used for filtering /sorting /searching
+  const id = parseInt(req.params.id);//params end point path parameter :id and query ?id.
   var result= jokes.find(item => item.id===id);
   console.log(id);
   res.json(result);
@@ -27,9 +27,40 @@ app.get("/jokes/:id",(req,res)=>{   //params end point path parameter :id and qu
 )
 
 //3. GET a jokes by filtering on the joke type
+app.get("/filter",(req,res)=>{
+  const type = req.query.type;
+  var filteredJokes=[];
+  let index = 0;
+
+  //const filteredActivities = jokes.filter((joke) => joke.jokeType === type);
+  for(let i=0;i<jokes.length;i++){
+  
+    if(jokes[i].jokeType===type){
+      // filteredJokes.push(jokes[i]);
+      filteredJokes[index]=jokes[i];
+      index++;
+    }
+  }
+  console.log(type);
+  console.log(filteredJokes);
+  res.json(filteredJokes);
+}
+
+)
 
 //4. POST a new joke
+app.post("/jokes", (req,res)=>{
+  const newJoke = {
+  bodyText : req.body.text ,
+  bodyType : req.body.type ,
+  jokesId :jokes.length + 1
+  }
+  jokes.push(newJoke);
+  console.log (jokes[jokes.length-1]);
+  res.json(newJoke)
 
+
+})
 //5. PUT a joke
 
 //6. PATCH a joke
