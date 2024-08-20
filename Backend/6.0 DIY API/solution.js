@@ -88,8 +88,10 @@ app.delete("/jokes/:id", (req, res) => {
 
 //DELETE All jokes
 app.delete("/all", (req, res) => {
-  const userKey = req.query.key;
-  if (userKey === masterKey) {
+  const userKey = req.query.Key 
+  console.log(userKey) ;
+  console.log(masterKey) ;
+  if (userKey == masterKey) {
     jokes = [];
     res.sendStatus(200);
   } else {
